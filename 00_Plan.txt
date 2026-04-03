@@ -1,0 +1,71 @@
+# Project Requirements
+
+1. Project Documentation
+ The project folder must include a `readme.txt` file.
+ The README should:
+  - List all used libraries.
+  - Provide clear instructions on how to run the project.
+
+2. Code Originality
+- All code must be written independently and be entirely original.
+- Visual assets (e.g., images, sprites) do **not** need to be original.
+
+3. Allowed Libraries - Done -
+- Only the following modules are permitted:
+  - `pgzero` (Pygame Zero)
+  - `math`
+  - `random`
+  Do NOT use the Pygame library.
+    You may import the `Rect` class from Pygame.
+
+4. Game Type - Done - 
+- Platformer (e.g., *Super Mario Bros.*, *Sonic the Hedgehog*)
+
+5. Main Menu - Done - 
+The game must include a main menu with clickable buttons:
+- Start Game
+- Toggle Music and Sound (On/Off)
+- Exit
+
+6. Enemies
+- The game must include **at least two different enemy types**.
+- Enemies must:
+  - Be dangerous to the player.
+  - Move within defined areas.
+
+7. Game Ending
+The game must have a complete and logical ending system:
+  - Winning condition
+  - Losing condition
+- The game should run without bugs affecting these outcomes.
+
+8. Animations
+- Both the player and enemies must have:
+  - Movement animations (e.g., walking, running).
+  - Idle animations (e.g., breathing, looking around, tail movement).
+
+9. Sound Design
+- The game must include:
+  - Background music
+  - Sound effects (e.g., attacks, collisions, collecting items)
+- Example sound resource: mixkit.co
+
+10. Visual Assets
+- Sprites and animations can be sourced externally.
+- Example visual resource: Kenney.nl
+
+11. Programming Requirements
+- You must implement your own classes using Object-Oriented Programming (OOP) for:
+  - Character movement
+  - Sprite animations
+
+12. Code Quality
+- Use clear and meaningful English names for:
+  - Variables
+  - Functions
+  - Classes
+- Follow **PEP 8** coding standards.
+
+============================================================
+Run Using 
+  pgzrun main.py
