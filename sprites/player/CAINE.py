@@ -4,7 +4,7 @@ from helpers.Animation import Animation
 GRAVITY = 800
 JUMP_SPEED = -420 
 MOVE_SPEED = 180 
-GROUND_Y = 520
+GROUND_Y = 370
 MAX_LIVES = 3
 HIT_COOLDOWN = 1.5
 
@@ -45,7 +45,7 @@ class CAINE:
             
         if keyboard.right:
             self.actor.x += MOVE_SPEED *dt 
-            self.facing_right = False
+            self.facing_right = True
             self._moving = True
 
         self.actor.x = max(20, min(780, self.actor.x))
@@ -79,7 +79,7 @@ class CAINE:
         if self.on_ground:
             self.vel_y = JUMP_SPEED
             try: 
-                sounds.jump.play()
+                sounds.sfx_jump.play()
             except Exception:
                 pass
     
@@ -89,7 +89,7 @@ class CAINE:
         self.lives -= 1
         self.hit_timer = HIT_COOLDOWN
         try:
-            sounds.hurt.play()
+            sounds.sfx_hurt.play()
         except Exception:
             pass 
         if self.lives <= 0: 
@@ -103,7 +103,7 @@ class CAINE:
     def collect_coin(self, value:int, sounds):
         self.score += value 
         try: 
-            sounds.coin.play()
+            sounds.sfx_coin.play()
         except Exception:
             pass
     def draw(self):
