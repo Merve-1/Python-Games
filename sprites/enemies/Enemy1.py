@@ -31,10 +31,7 @@ class Enemy1:
         self.actor.image = self._anim.current_frame()
 
         self.actor.angle = 0 
-        if self.direction ==1:
-            self.actor.flip_x=True
-        else:
-            self.actor.flip_x = False
+
     def draw(self):
         self.actor.draw()
 
