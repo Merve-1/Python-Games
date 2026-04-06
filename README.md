@@ -2,6 +2,9 @@
 
 A 2D side-scrolling platformer game built with Python and Pygame Zero. Guide CAINE through a timed mission, collect coins, avoid enemies, and reach a score of 45 before time runs out.
 
+<img width="989" height="777" alt="image" src="https://github.com/user-attachments/assets/9ca3d1a5-971c-43d1-ad22-006cc4cabf08" />
+
+
 ---
 
 ## Game Overview
