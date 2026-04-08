@@ -57,23 +57,22 @@ class GameScene:
         for coin in self.coins:
             if coin.check_collect(self.player.actor):
                 self.player.collect_coin(coin.value, self.sounds)
-
-
+       
         if not self.player.alive:
             self.state = "lost"
-            return 
-        
-        if self.timer>= WIN_TIME and self.player.score >= 45:
+            return
+
+        if self.player.score >= 45:
             self.state = "won"
             try:
                 self.sounds.win.play()
             except Exception:
                 pass
-        else:
-            if self.timer >= WIN_TIME and self.player.score < 45:
-                self.state = "lost"
-        
-    
+            return
+
+        if self.timer >= WIN_TIME:
+            self.state = "lost"
+
     def on_key_down(self, key):
         if key in (pz.keys.SPACE, pz.keys.UP):
             self.player.jump(self.sounds)
